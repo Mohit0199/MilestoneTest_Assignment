@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<h1>Sign Up</h1>
+<form method="POST" action="{{ url_for('signup') }}">
+    {{ form.hidden_tag() }}
+    
+    <div>
+        {{ form.username.label }}<br>
+        {{ form.username(size=32) }}<br>
+        {% for error in form.username.errors %}
+            <span style="color: red;">{{ error }}</span><br>
+        {% endfor %}
+    </div>
+
+    <div>
+        {{ form.password.label }}<br>
+        {{ form.password(size=32) }}<br>
+        {% for error in form.password.errors %}
+            <span style="color: red;">{{ error }}</span><br>
+        {% endfor %}
+    </div>
+
+    <div>
+        {{ form.confirm_password.label }}<br>
+        {{ form.confirm_password(size=32) }}<br>
+        {% for error in form.confirm_password.errors %}
+            <span style="color: red;">{{ error }}</span><br>
+        {% endfor %}
+    </div>
+
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+
+{% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="flash {{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+<p>Already have an account? <a href="{{ url_for('signin') }}">Sign In</a></p>
+
+{% endblock %}
