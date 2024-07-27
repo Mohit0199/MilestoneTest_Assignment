@@ -1,0 +1,3 @@
+This is a sample paragraph. 
+    It contains several words and this paragraph is just a sample. 
+    The purpose of this paragraph is to provide some text data for processing.

@@ -1,0 +1,6 @@
+ItemID, ItemName, Quantity, Price
+001, Apples, 50, 0.50
+002, Bananas, 100, 0.30
+003, Oranges, 75, 0.60
+004, Grapes, 150, 2.00
+005, Strawberries, 200, 3.00

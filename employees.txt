@@ -1,0 +1,4 @@
+Name: Aarav Sharma, Age: 30, Salary: 50000
+Name: Isha Patel, Age: 25, Salary: 45000
+Name: Vihaan Singh, Age: 35, Salary: 60000
+Name: Anaya Gupta, Age: 28, Salary: 55000
